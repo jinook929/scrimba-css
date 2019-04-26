@@ -1,0 +1,100 @@
+html,
+body {
+	margin: 10px;
+	height: 100%;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 1.3rem;
+	color: bisque;
+  background: bisque;
+  box-sizing: border-box;
+}
+
+/* .container {
+  padding: 0;
+  margin: 0;
+} */
+
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: rgb(105, 220, 255);
+	list-style: none;
+	border: 5px solid rgb(250, 185, 65);
+  display: flex;
+}
+
+li {
+	line-height: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.search > input {
+  background: rgb(105, 220, 255);
+  outline: none;
+  border: none;
+  border-bottom: 1px  solid bisque;
+  height: 110%;
+  width: 100%;  
+  text-align: center;
+}
+
+::placeholder { 
+  color: bisque;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+}
+
+::-ms-input-placeholder { 
+  color: bisque;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+}
+
+
+.home {
+  /* background: yellow; */
+	flex: 1 1 0;
+}
+
+.profile {
+  /* background: yellowgreen; */
+  flex: 1 1 0;
+}
+
+.search {
+  /* background: pink; */
+  /* flex: 1; */
+  flex: 1 1 0;
+}
+
+.logout {
+  /* background: steelblue; */
+	flex: 1 1 0;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container > li {
+    flex-basis: 40%;
+  }
+
+  .search > input {
+    text-align: center;
+  }
+
+}
+
+@media all and (max-width: 500px) {
+  .container > li {
+    flex: 1 1 100%;
+  }
+
+  .search {
+    order: 1;
+  }
+}
